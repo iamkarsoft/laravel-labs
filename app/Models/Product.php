@@ -9,13 +9,13 @@ class Product extends Model
 {
     use HasFactory;
 
-    public $name= 'Fallout 4' ;
+    protected $name='Fallout 4' ;
 
     protected $guarded = [];
 
     public function __construct($name)
     {
-        $this->name = $name;
+        $this->name=$name;
     }
 
     public function name(){
