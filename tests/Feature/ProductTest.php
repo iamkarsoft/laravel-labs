@@ -18,9 +18,19 @@ class ProductTest extends TestCase
     public function product_has_name(){
 
         // create new product
-        $product = New Product('Fallout 4');
+        $product = New Product('Fallout 4',150);
 
         // assert to see if product name is equal to chosen name
         $this->assertEquals('Fallout 4', $product->name());
+    }
+
+    /**
+     * @test
+     */
+    public function product_has_price(){
+        $product = New Product('Fallout 4',150);
+
+        $this->assertEquals(150,$product->price());
+
     }
 }
