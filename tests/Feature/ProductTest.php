@@ -9,28 +9,39 @@ use Tests\TestCase;
 
 class ProductTest extends TestCase
 {
+
     /**
-     * A basic feature test example.
+     * Setup methods run before every method in your test class
      *
+     */
+
+    protected $product;
+
+    public function setUp(): void
+    {
+       $this->product = new Product('Fallout 4',150);
+    }
+    /**
+     *check if product has name
      * @return void
      */
     /** @test */
     public function product_has_name(){
 
-        // create new product
-        $product = New Product('Fallout 4',150);
+
 
         // assert to see if product name is equal to chosen name
-        $this->assertEquals('Fallout 4', $product->name());
+        $this->assertEquals('Fallout 4', $this->product->name());
     }
 
     /**
      * @test
+     * Check if product has price
      */
     public function product_has_price(){
-        $product = New Product('Fallout 4',150);
 
-        $this->assertEquals(150,$product->price());
+
+        $this->assertEquals(150,$this->product->price());
 
     }
 }
