@@ -32,4 +32,25 @@ class OrderTest extends TestCase
 //        $this->assertEquals(2,count($order->products()));
         $this->assertCount(2,$order->products());
     }
+
+    /**
+     * @test
+     */
+
+    public function determine_the_total_cost_of_the_order()
+    {
+         // instantiate order class
+        $order = new Order;
+
+        // create products
+        $product = new Product('Fish',30);
+        $product2 = new Product('Chicken',24);
+
+        // add products to order
+        $order->add($product);
+        $order->add($product2);
+
+        // check the total
+        $this->assertEquals(54, $order->total());
+    }
 }

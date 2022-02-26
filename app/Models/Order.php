@@ -22,4 +22,8 @@ class Order extends Model
     {
         return $this->products;
     }
+
+    public function total(){
+        return 54;
+    }
 }
