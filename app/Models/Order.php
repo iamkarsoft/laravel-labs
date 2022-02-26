@@ -9,7 +9,17 @@ class Order extends Model
 {
     use HasFactory;
 
-    public function add(){
+    // expects array
+    protected $products = [];
 
+    public function add(Product $product)
+    {
+        // push added product into array
+        $this->products[] = $product;
+    }
+
+    public function products()
+    {
+        return $this->products;
     }
 }
