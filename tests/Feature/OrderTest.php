@@ -29,6 +29,7 @@ class OrderTest extends TestCase
         $order->add($product2);
 
         // assert to see if order has 2 products
-        $this->assertEquals(2,count($order->products()));
+//        $this->assertEquals(2,count($order->products()));
+        $this->assertCount(2,$order->products());
     }
 }
