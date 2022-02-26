@@ -23,7 +23,16 @@ class Order extends Model
         return $this->products;
     }
 
-    public function total(){
-        return 54;
+    public function total()
+    {
+        // set total to 0
+        $total = 0;
+
+        // use price method from product class to
+        foreach ($this->products as $product) {
+            $total += $product->price();
+        }
+
+        return $total;
     }
 }
