@@ -28,7 +28,6 @@ class Order extends Model
         // set total to 0
         $total = 0;
 
-        // use price method from product class to
         foreach ($this->products as $product) {
             $total += $product->price();
         }
