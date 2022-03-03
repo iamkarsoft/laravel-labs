@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BaseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConversionController;
 
@@ -18,5 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// route for testing  kudi
 Route::get('/exchange',[ConversionController::class,'index'])->name('exchange');
+
+// route for
+Route::get('/trix',[BaseController::class,'trix'])->name('trix');
+Route::post('/trix',[BaseController::class,'trixData'])->name('trix.data');
+
