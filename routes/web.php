@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BaseController;
+use App\Http\Controllers\CarsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConversionController;
 
@@ -22,6 +23,8 @@ Route::get('/', function () {
 // route for testing  kudi
 Route::get('/exchange',[ConversionController::class,'index'])->name('exchange');
 
+Route::get('/scrape',[CarsController::class,'gouttescrape'])->name('scrape');
+Route::get('/scrape2',[CarsController::class,'roachscrape'])->name('raochscrape');
 // route for
 Route::get('/trix',[BaseController::class,'trix'])->name('trix');
 Route::post('/trix',[BaseController::class,'trixData'])->name('trix.data');
