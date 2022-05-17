@@ -21,11 +21,23 @@ Route::get('/', function () {
 });
 
 // route for testing  kudi
-Route::get('/exchange',[ConversionController::class,'index'])->name('exchange');
+Route::get('/exchange', [ConversionController::class, 'index'])->name('exchange');
 
-Route::get('/scrape',[CarsController::class,'gouttescrape'])->name('scrape');
-Route::get('/scrape2',[CarsController::class,'roachscrape'])->name('raochscrape');
+Route::get('/scrape', [CarsController::class, 'gouttescrape'])->name('scrape');
+Route::get('/scrape2', [CarsController::class, 'roachscrape'])->name('raochscrape');
+
+
+// scrape iaa hiting node
+Route::get('/scrape/iaaa', [CarsController::class, 'iaascrape'])->name('scrapeIaa');
+
+
 // route for
-Route::get('/trix',[BaseController::class,'trix'])->name('trix');
-Route::post('/trix',[BaseController::class,'trixData'])->name('trix.data');
+Route::get('/trix', [BaseController::class, 'trix'])->name('trix');
+Route::post('/trix', [BaseController::class, 'trixData'])->name('trix.data');
 
+
+// route for learning more about blade components
+
+Route::get('/component', function () {
+    return view('component');
+});

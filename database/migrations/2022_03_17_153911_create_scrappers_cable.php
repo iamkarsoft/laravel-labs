@@ -13,10 +13,12 @@ class CreateScrappersCable extends Migration
     public function up()
     {
         Schema::create('scrapers', function (Blueprint $table) {
-            $table->uuid('id');
+            // $table->uuid('id');
+            $table->id();
             $table->string('reference');
             $table->string('country_of_origin')->nullable();
             $table->string('name');
+            $table->string('current_bid')->nullable();
             $table->string('price');
             $table->string('acv')->nullable();
             $table->string('market')->nullable();

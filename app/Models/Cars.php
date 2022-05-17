@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cars extends Model
 {
-    use HasFactory,Uuids;
+    use HasFactory;
     protected $guarded= [];
     protected $table='scrapers';
 }
