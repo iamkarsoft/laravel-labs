@@ -35,10 +35,25 @@
     {{-- modal --}}
 
      <x-confirmation-modal
-     title="Confirm deletion"
-      body="this is to confirm deletion"
-      footer="Are you sure?"
+
+
      >
+     <x-slot name="title">
+         Confirm deletion
+     </x-slot>
+
+    <x-slot name="body">
+            <p>this is to confirm deletion</p>
+    </x-slot>
+
+    <x-slot name="footer">
+        <div>
+            Are you sure
+        </div>
+        <x-button  class="text-white bg-gray-400">Cancel</x-button>
+        <x-button  class="text-white bg-blue-400">Continue</x-button>
+
+    </x-slot>
 
      </x-confirmation-modal>
 

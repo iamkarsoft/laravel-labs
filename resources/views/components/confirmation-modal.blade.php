@@ -1,4 +1,4 @@
-<div>
+<div x-data="{show: false}" x-show="show">
     <div class="fixed inset-0 bg-slate-100 opacity-70">
 
     </div>
@@ -13,9 +13,8 @@
                </main>
 
                <footer class="space-x-4">
-                <div>{{$footer}}</div>
-                    <x-button  class="text-white bg-gray-400">Cancel</x-button>
-                    <x-button  class="text-white bg-blue-400">Continue</x-button>
+               {{$footer}}
+
                </footer>
             </div>
           </div>
