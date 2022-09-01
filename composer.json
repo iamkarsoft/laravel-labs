@@ -9,10 +9,10 @@
         "fabpot/goutte": "^4.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "iamkarsoft/kudi": "dev-master",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "livewire/livewire": "^2.10",
         "roach-php/core": "^0.3.0",
         "roach-php/laravel": "dev-main",
         "webpatser/laravel-uuid": "^4.0"
