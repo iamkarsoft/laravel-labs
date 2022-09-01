@@ -34,26 +34,12 @@
 
     {{-- modal --}}
 
-     <div>
-        <div class="fixed inset-0 bg-slate-100 opacity-70">
+     <x-confirmation-modal
+     title="Confirm deletion"
+      body="this is to confirm deletion"
+      footer="Are you sure?"
+     >
 
-        </div>
-            <div class="bg-white p-4 space-y-4 shadow-sm max-w-sm m-auto h-[240px] rounded-md fixed top right-0 inset-0">
-              <div class="flex flex-col justify-between space-y-8 ">
-                   <header>
-                    <h2 class="text-xl font-bold">Modal Header</h2>
-                   </header>
-
-                   <main>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ratione!
-                   </main>
-
-                   <footer class="space-x-4">
-                        <button class="bg-gray-400 rounded text-xs uppercase text-white py-2 px-4 hover-gray-500 transition-all duration-200">Cancel</button>
-                        <button class="bg-blue-400 rounded text-xs text-white uppercase py-2 px-4 hover-gray-500 transition-all duration-200">Continue</button>
-                   </footer>
-                </div>
-              </div>
-     </div>
+     </x-confirmation-modal>
 
 </x-layout>
